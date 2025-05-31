@@ -2,8 +2,8 @@ worker_processes auto;
 events {}
 stream {
     upstream backend {
-        server IP:PORT;
-    }
+        server gcp3.noorproxy.xyz:80;
+    } 
     server {
         listen 8080;
         proxy_pass backend;
